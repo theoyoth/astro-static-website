@@ -1,0 +1,24 @@
+ @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+body {
+	font-family: 'Rubik',Verdana, sans-serif;
+	text-rendering: optimizeLegibility;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: rgb(24 24 27);
+    color:rgb(190, 190, 190);
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+		background-color: rgb(190, 190, 190);
+    color:#333;
+    color-scheme: light;
+  }
+}

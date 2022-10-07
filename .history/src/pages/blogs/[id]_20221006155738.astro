@@ -1,0 +1,29 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../config";
+
+import BlogPost from "../../layouts/BlogPost.astro";
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob("../blog/*.{md,mdx}");
+
+  return posts.map((post) => ({
+    params: {
+      id: post.frontmatter.id,
+    },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+console.log(post.url);
+---
+
+<BlogPost title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="mb-4">
+    <img src={post.frontmatter.heroImage} alt="hero image" class="rounded-xl" />
+  </div>
+  <h1 class="text-2xl underline underline-offset-4 decoration-violet-500">
+    {post.frontmatter.title}
+  </h1>
+  <p>{post.frontmatter.description}</p>
+</BlogPost>

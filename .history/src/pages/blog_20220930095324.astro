@@ -1,0 +1,38 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Body from "../components/Body.astro";
+import Content from "../components/Content.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header />
+    <main class="pt-[62px]">
+      <Content>
+        <section>
+          <p class="indent-6 text-sm">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            ullam, ratione itaque sint sit dolore voluptate repellat quos
+            numquam accusamus, optio, asperiores nam perferendis eos quisquam
+            deserunt non esse rem?
+          </p>
+        </section>
+      </Content>
+    </main>
+    <Footer />
+  </Body>
+</html>

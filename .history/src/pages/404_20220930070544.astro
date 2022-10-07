@@ -1,0 +1,26 @@
+---
+import Body from "../components/Body.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Content from "../components/Content.astro";
+import Footer from "../components/Footer.astro";
+import MastHead from "../components/MastHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <MastHead />
+    <Header />
+    <main>
+      <Content>
+        <h1>There is no page you&apos;re looking for</h1>
+      </Content>
+    </main>
+    <Footer />
+  </Body>
+</html>

@@ -1,0 +1,13 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../config";
+---
+
+<header class="flex py-4 backdrop-blur-sm border border-1 border-red-500">
+  <div>
+    <h2><a href="/">Theoyoth</a></h2>
+  </div>
+  <nav class="ml-20">
+    <HeaderLink href="/blog">Blog</HeaderLink>
+  </nav>
+</header>

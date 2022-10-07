@@ -1,0 +1,22 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import ThemeToggle from "./ThemeToggleButton";
+---
+
+<header class="py-4 px-4 backdrop-blur-sm z-[10] fixed left-0 top-0 w-full">
+  <div>
+    <nav class="flex gap-6 border border-1 border-black">
+      <a href="/">
+        <h2
+          class="underline underline-offset-4 hover:underline-offset-2 transition ease-in duration-200"
+        >
+          Theoyoth
+        </h2>
+      </a>
+      <div class="items-center gap-6">
+        <HeaderLink href="/blog">Blog</HeaderLink>
+      </div>
+      <ThemeToggle client:visible />
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,14 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../config";
+---
+
+<header class="flex justify-between">
+  <div>
+    <h2>Theoyoth</h2>
+  </div>
+  <nav class="w-[140px] flex justify-between">
+    <HeaderLink href="/">Home</HeaderLink>
+    <HeaderLink href="/blog">Blog</HeaderLink>
+  </nav>
+</header>

@@ -1,0 +1,34 @@
+---
+import Header from "../../components/Header.astro";
+import BaseHead from "../../components/BaseHead.astro";
+import Body from "../../components/Body.astro";
+import Content from "../../components/Content.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../config";
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob("../blog/*.{md,mdx}");
+
+  return posts.map((post) => ({
+    params: {
+      id: post.frontmatter.id,
+    },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<html>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Content>
+      <h1>{post.frontmatter.title}</h1>
+      <p>{post.frontmatter.description}</p>
+    </Content>
+  </Body>
+
+
+</html>

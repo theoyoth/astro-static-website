@@ -1,0 +1,20 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import ThemeToggle from "./ThemeToggleButton";
+---
+
+<header class="fixed left-0 p-4 px-4 backdrop-blur-md z-20 w-full">
+  <div class="mx-auto max-w-3xl">
+    <nav class="flex justify-between items-center">
+      <div class="flex justify-between gap-6">
+        <a href="/">
+          <h2 class="transition ease-in duration-200">Theoyoth</h2>
+        </a>
+        <div>
+          <HeaderLink href="/blog">Blog</HeaderLink>
+        </div>
+      </div>
+      <ThemeToggle client:visible />
+    </nav>
+  </div>
+</header>

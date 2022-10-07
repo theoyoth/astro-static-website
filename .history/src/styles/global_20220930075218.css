@@ -1,0 +1,36 @@
+ @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+body {
+	font-family: 'Rubik',Verdana, sans-serif;
+	text-rendering: optimizeLegibility;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    background-color: rgb(24 24 27);
+    color:rgb(212 212 216);
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+		background-color: rgb(212 212 216);
+    color:rgb(24 24 27);
+    color-scheme: light;
+  }
+} */
+
+:root[color-scheme="dark"] {
+  background-color: rgb(24 24 27);
+	color:rgb(212 212 216);
+	color-scheme: dark;
+}
+
+:root[color-scheme="light"] {
+  background-color: rgb(212 212 216);
+	color:rgb(24 24 27);
+	color-scheme: light;
+}

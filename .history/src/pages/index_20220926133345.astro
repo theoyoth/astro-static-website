@@ -1,0 +1,29 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Body from "../components/Body.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import Content from "../components/Content.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header title={SITE_TITLE} />
+    <main class="pt-[60px]">
+      <Content>
+        <section>
+          <p class="indent-6 text-sm">
+            I&apos;m a web developer, especially for frontend side, I still
+            develope myself to be better frontend
+          </p>
+        </section>
+      </Content>
+    </main>
+    <Footer />
+  </Body>
+</html>

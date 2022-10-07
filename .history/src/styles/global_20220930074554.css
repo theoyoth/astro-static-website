@@ -1,0 +1,27 @@
+ @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+body {
+	font-family: 'Rubik',Verdana, sans-serif;
+	text-rendering: optimizeLegibility;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #333;
+    text-color:rgb(190, 190, 190);
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: var(--bg--light);
+    --txt: var(--txt--light);
+    --accent: var(--accent--light);
+    --accent1: var(--accent1--light);
+    --muted: var(--muted--light);
+    color-scheme: light;
+  }
+}
